@@ -1,0 +1,152 @@
+body {
+  background: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Didact Gothic', sans-serif;
+  width: 960px;
+}
+.nav {
+  align-items: center;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 960px;
+  z-index:3;
+}
+.name {
+  background-color: white;
+  border:1px solid white;
+  color: black;
+  font-size: 24px;
+  padding: 14px;
+  width: 30%;
+  text-align: center;
+}
+.tabs {
+  display: flex;
+  flex-direction: row;
+}
+.nav a {
+  color: #f2f2f2;
+  margin-right: 5px;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+}
+/* Change color on hover */
+.nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.main{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  min-height: calc(100vh - 70px);
+}
+.left {   
+  background-color: white;
+  margin-top: 20px;
+  padding: 10px;
+  width: 650px;
+  
+}
+.headleft {
+  border-bottom: 1px dotted gray;
+  color: black;
+  font-size: 25px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.profpic {
+  float: left;
+  padding: 10px 25px 10px 10px;
+}
+.details {
+  padding: 10px;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100px;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(70, 57, 57);
+}
+.right {
+  background-color: white;
+  height: 150px;
+  margin-top: 20px;
+  padding: 10px;
+  width: 270px;
+}
+.headright {
+  border-bottom: 1px dotted gray;
+  color: black;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 10px;
+}
+.column {
+  float: left;
+  width: 50%;
+}
+.content {
+  background-color: white;
+  padding: 10px;
+  position: relative;
+}
+.tilename {
+  background-color: rgba(120, 120, 120, 0.5);
+  bottom: 20px;
+  padding: 5px 15px 5px 15px;
+  position: absolute;
+  text-align: center;
+  width: 295px;
+}
+.foot { 
+  background: #ddd;
+  margin-top: 10px;
+  text-align: center;
+  padding: 20px;
+}
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 960px) {
+  .left, .right {   
+    padding: 0;
+    width: 100%;  
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .nav a {
+      float: none;
+      width:100%;
+  }
+}
